@@ -1,28 +1,33 @@
-/* tasktracker/static/css/styles.css */
 
-.priority-low {
-    background-color: #b3e0ff; /* Light blue for low priority */
-  }
-  
-  .priority-medium {
-    background-color: #ffd699; /* Light orange for medium priority */
-  }
-  
-  .priority-high {
-    background-color: #ff9999; /* Light red for high priority */
-  }
-  
-  .status-new {
-    color: #1a1a1a; /* Black text for new status */
-  }
-  
-  .status-in-progress {
-    color: #008000; /* Green text for in progress status */
-  }
-  
-  .status-done {
-    color: #808080; /* Gray text for done status */
-  }
-  
-  /* Add more styles as needed */
-  
+
+.task-card {
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+}
+
+.priority-circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.status-circle {
+    display: inline-block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-right: 5px;
+}
+
+.priority-low { background-color: green; }
+.priority-medium { background-color: blue; }
+.priority-high { background-color: red; }
+
+.status-done { background-color: green; }
+.status-postponed { background-color: yellow; }
+.status-cancelled { background-color: red; }
+
