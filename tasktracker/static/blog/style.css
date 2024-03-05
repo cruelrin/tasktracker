@@ -1,0 +1,28 @@
+/* tasktracker/static/css/styles.css */
+
+.priority-low {
+    background-color: #b3e0ff; /* Light blue for low priority */
+  }
+  
+  .priority-medium {
+    background-color: #ffd699; /* Light orange for medium priority */
+  }
+  
+  .priority-high {
+    background-color: #ff9999; /* Light red for high priority */
+  }
+  
+  .status-new {
+    color: #1a1a1a; /* Black text for new status */
+  }
+  
+  .status-in-progress {
+    color: #008000; /* Green text for in progress status */
+  }
+  
+  .status-done {
+    color: #808080; /* Gray text for done status */
+  }
+  
+  /* Add more styles as needed */
+  
