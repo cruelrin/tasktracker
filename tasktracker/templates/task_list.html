@@ -1,13 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Task List</title>
-</head>
-<body>
-    {% block content %}
+{% extends 'base.html' %}
+
+{% block content %}
   <h1>Task List</h1>
   <table border="1">
     <tr>
@@ -30,30 +23,3 @@
   </table>
   <a href="{% url 'create_task' %}">Create Task</a>
 {% endblock %}
-
-    <h2>Список задач</h2>
-    <table>
-        <thead>
-            <tr>
-                <th>Задача</th>
-                <th>Приоритет</th>
-                <th>Статус</th>
-                <th>Действия</th>
-            </tr>
-        </thead>
-        <tbody>
-            {% for task in tasks %}
-            <tr class="priority-{{ task.priority|lower }} status-{{ task.status|lower }}">
-                <td>{{ task.title }}</td>
-                <td>{{ task.get_priority_display }}</td>
-                <td>{{ task.get_status_display }}</td>
-                <td>
-                    <a href="{% url 'task_detail' task.id %}">Подробнее</a>
-                    <a href="{% url 'edit_task' task.id %}">Изменить</a>
-                </td>
-            </tr>
-            {% endfor %}
-        </tbody>
-    </table>
-</body>
-</html>
